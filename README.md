@@ -1,12 +1,12 @@
-# Custom Recovery Device Tree for Xiaomi Poco C55 (earth)
+# Custom Recovery Device Tree for Xiaomi Redmi 12C (earth)
 
-The Poco C55 is a budget range smartphone from Redmi, Released 2023, February 28
+The Redmi 12C is a budget range smartphone from Redmi
 
 ## Device Specifications
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-OS      | Android 12, MIUI 13 for POCO
+OS      | Android 12, MIUI 13 for Redmi 12C
 CPU     | Octa-core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55)
 Chipset | Mediatek MT6769Z Helio G85 (12nm)
 GPU     | Mali-G52 MC2
@@ -59,10 +59,6 @@ Others | OTG, 10W wired charging
 2) adb pull /tmp/recovery.log
 3) adb shell dmesg > dmesg.log
 ```
-
-## Device Picture
-
-![Poco C55](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-poco-c55-1.jpg "Poco C55")
 
 ## Warning
 - Always backup before flashing
