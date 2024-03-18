@@ -16,7 +16,7 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export PLATFORM_VERSION="16.1.0"
-	export PLATFORM_SECURITY_PATCH="2099-12-31"
+	export PLATFORM_SECURITY_PATCH="2024-02-18"
 	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
 	export FOX_AB_DEVICE=1
@@ -54,7 +54,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
     # -- add settings for build version --
     export FOX_VERSION="OFOX-12.1"
-    export OF_MAINTAINER="ARUN V"
+    export OF_MAINTAINER="Terentyeff"
     export FOX_BUILD_TYPE="Unofficial"
 
     # screen settings
