@@ -23,30 +23,6 @@ on:
         description: 'DEVICE_PATH'
         required: true
         default: 'device/xiaomi/earth'
-      KERNEL_TREE_URL:
-        description: 'KERNEL_TREE_URL'
-        required: true
-        default: 'https://github.com/mt6768-dev/android_kernel_xiaomi_earth'
-      KERNEL_TREE_BRANCH:
-        description: 'KERNEL_TREE_BRANCH'
-        required: true
-        default: 'lineage-21'
-      KERNEL_PATH:
-        description: 'KERNEL_PATH'
-        required: true
-        default: 'kernel/xiaomi/earth'
-      VENDOR_TREE_URL:
-        description: 'VENDOR_TREE_URL'
-        required: true
-        default: 'https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth'
-      VENDOR_TREE_BRANCH:
-        description: 'VENDOR_TREE_BRANCH'
-        required: true
-        default: 'lineage-21'
-      VENDOR_PATH:
-        description: 'VENDOR_PATH'
-        required: true
-        default: 'vendor/xiaomi/earth'
       COMMON_TREE_URL:
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
@@ -137,12 +113,12 @@ jobs:
       
     - name: Clone kernel tree
       run: |
-        git clone ${{ github.event.inputs.KERNEL_TREE_URL }} -b ${{ github.event.inputs.KERNEL_TREE_BRANCH }} ./${{ github.event.inputs.KERNEL_PATH }}
+        git clone https://github.com/mt6768-dev/android_kernel_xiaomi_earth -b lineage-21 ./kernel/xiaomi/earth
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
       
     - name: Clone vendor tree
       run: |
-        git clone ${{ github.event.inputs.VENDOR_TREE_URL }} -b ${{ github.event.inputs.VENDOR_TREE_BRANCH }} ./${{ github.event.inputs.VENDOR_PATH }}
+        git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth -b lineage-21 ./vendor/xiaomi/earth
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Clone common tree
