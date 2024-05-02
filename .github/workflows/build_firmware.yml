@@ -1,4 +1,4 @@
-name: crDroid Builder
+name: Firmware Builder
 
 on:
   workflow_dispatch:
