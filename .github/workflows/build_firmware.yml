@@ -145,7 +145,7 @@ jobs:
       run: |
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
-        lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && make -j$(nproc --all)
+        lunch ${{ github.event.inputs.MAKEFILE_NAME }}-userdebug && make clean && make -j$(nproc --all)
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Upload to Release
