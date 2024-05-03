@@ -16,7 +16,7 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export PLATFORM_VERSION="16.1.0"
-	export PLATFORM_SECURITY_PATCH="2024-02-18"
+	export PLATFORM_SECURITY_PATCH="2024-05-03"
 	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
 	export FOX_AB_DEVICE=1
@@ -37,11 +37,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
 	export OF_QUICK_BACKUP_LIST="/boot;/data;"
 	export OF_PATCH_AVB20=1
-	export FOX_DELETE_AROMAFM=1
+	export FOX_DELETE_AROMAFM=0
 	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1510672800"; # Tue Nov 14 15:20:00 GMT 2017
-	export FOX_ENABLE_APP_MANAGER=0
-	export FOX_DISABLE_APP_MANAGER=1
-    export FOX_DELETE_MAGISK_ADDON=1
+	export FOX_ENABLE_APP_MANAGER=1
+	export FOX_DISABLE_APP_MANAGER=0
+    export FOX_DELETE_MAGISK_ADDON=0
 
     # use system (ROM) fingerprint where available
     export OF_USE_SYSTEM_FINGERPRINT=1
@@ -50,10 +50,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_KEEP_DM_VERITY=1
 	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=0
     export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
-    export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
+    export OF_DISABLE_MIUI_OTA_BY_DEFAULT=0
 
     # -- add settings for build version --
-    export FOX_VERSION="OFOX-12.1"
+    export FOX_VERSION="OFOX-12.1.3"
     export OF_MAINTAINER="Terentyeff"
     export FOX_BUILD_TYPE="Unofficial"
 
